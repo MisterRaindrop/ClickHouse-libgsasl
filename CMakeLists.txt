@@ -87,7 +87,7 @@ set(SRCS
     ${LIBGSASL_SOURCE_DIR}/login/server.c
 )
 
-add_library(libgsasl STATIC ${SRCS})
+add_library(libgsasl SHARED ${SRCS})
 
 if (USE_KRB5)
     target_sources(libgsasl PRIVATE
